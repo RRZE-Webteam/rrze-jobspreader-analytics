@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "devDependencies": {
+        "@wordpress/scripts": "^30.21.0"
+    },
+    "scripts": {
+        "start": "wp-scripts start src/jobspreader-analytics.js --output-path=build --output-filename=jobspreader-analytics.js",
+        "build": "wp-scripts build src/jobspreader-analytics.js --output-path=build --output-filename=jobspreader-analytics.js"
+    },
+    "browserslist": [
+        "extends @wordpress/browserslist-config"
+    ]
+}

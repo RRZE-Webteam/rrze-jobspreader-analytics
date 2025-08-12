@@ -1,0 +1,118 @@
+# Copyright (C) 2025 RRZE Webteam
+# This file is distributed under the GNU General Public License Version 3.
+msgid ""
+msgstr ""
+"Project-Id-Version: RRZE Jobspreader Analytics 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rrze-jobspreader-"
+"analytics\n"
+"POT-Creation-Date: 2025-08-12T10:16:36+00:00\n"
+"PO-Revision-Date: 2025-08-12 13:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE@formal\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: rrze-jobspreader-analytics\n"
+
+#. Plugin Name of the plugin
+#: rrze-jobspreader-analytics.php
+msgid "RRZE Jobspreader Analytics"
+msgstr "RRZE-Jobspreader-Analytics"
+
+#. Plugin URI of the plugin
+#: rrze-jobspreader-analytics.php
+msgid "https://github.com/RRZE-Webteam/rrze-jobspreader-analytics"
+msgstr "https://github.com/RRZE-Webteam/rrze-jobspreader-analytics"
+
+#. Description of the plugin
+#: rrze-jobspreader-analytics.php
+msgid "Adapted version of the Jobspreader Analytics Plugin by Wollmilchsau."
+msgstr "Angepasste Version des Jobspreader-Analytics-Plugin von Wollmilchsau."
+
+#. Author of the plugin
+#: rrze-jobspreader-analytics.php
+msgid "RRZE Webteam"
+msgstr "RRZE-Webteam"
+
+#. Author URI of the plugin
+#: rrze-jobspreader-analytics.php
+msgid "https://www.wp.rrze.fau.de/"
+msgstr "https://www.wp.rrze.fau.de/"
+
+#: includes/Main.php:59 includes/Settings.php:98
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/Settings.php:75 includes/Settings.php:76
+msgid "Jobspreader Analytics"
+msgstr "Jobspreader-Analytics"
+
+#: includes/Settings.php:100
+msgid "Configuration of the Jobspreader Analytics loader."
+msgstr "Konfiguration des Jobspreader-Analytics-Loaders."
+
+#: includes/Settings.php:108
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+#: includes/Settings.php:118
+msgid "Script Placement"
+msgstr "Skriptplatzierung"
+
+#. translators: %s is a placeholder for the support email address.
+#: includes/Settings.php:138
+#, php-format
+msgid ""
+"Please enter the Jobspreader Analytics API key received by Wollmilchsau. Get "
+"support at %s."
+msgstr ""
+"Bitte geben Sie den von Wollmilchsau erhaltenen Jobspreader-Analytics-API-"
+"Schlüssel ein. Support erhalten Sie unter %s."
+
+#: includes/Settings.php:149
+msgid "Head"
+msgstr "Head"
+
+#: includes/Settings.php:150
+msgid "Body (footer)"
+msgstr "Body (footer)"
+
+#: includes/Settings.php:153
+msgid "Choose where to inject the external Jobspreader script."
+msgstr "Wählen Sie, wo das externe Jobspreader-Skript eingefügt werden soll."
+
+#: includes/Settings.php:165
+msgid "Jobspreader Analytics Settings"
+msgstr "RRZE-Jobspreader"
+
+#: includes/Settings.php:170
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#. translators: 1: Server WordPress version number, 2: Required WordPress version number.
+#: rrze-jobspreader-analytics.php:131
+#, php-format
+msgid ""
+"The server is running WordPress version %1$s. The plugin requires at least "
+"WordPress version %2$s."
+msgstr ""
+"Auf dem Server läuft WordPress Version %1$s. Das Plugin erfordert mindestens "
+"WordPress Version %2$s."
+
+#. translators: 1: Server PHP version number, 2: Required PHP version number.
+#: rrze-jobspreader-analytics.php:139
+#, php-format
+msgid ""
+"The server is running PHP version %1$s. The plugin requires at least PHP "
+"version %2$s."
+msgstr ""
+"Auf dem Server wird PHP Version %1$s ausgeführt. Das Plugin erfordert "
+"mindestens PHP Version %2$s."
+
+#. translators: 1: The plugin name, 2: The error string.
+#: rrze-jobspreader-analytics.php:183
+#, php-format
+msgid "Plugins: %1$s: %2$s"
+msgstr "Plugins: %1$s: %2$s"
