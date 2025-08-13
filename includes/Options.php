@@ -41,8 +41,8 @@ final class Options
     {
         return (object) [
             'api_key'            => '',
-            'script_placement'   => 'head', // 'head' | 'body'
-            'tracked_post_types' => 'job',     // one slug per line, default to 'job'
+            'script_placement'   => 'body', // 'head' | 'body'
+            'tracked_post_types' => 'job',  // one slug per line, default to 'job'
         ];
     }
 
@@ -88,8 +88,8 @@ final class Options
 
         $out['api_key'] = isset($values['api_key']) ? sanitize_text_field($values['api_key']) : '';
 
-        $placement = isset($values['script_placement']) ? $values['script_placement'] : 'head';
-        $out['script_placement'] = in_array($placement, ['head', 'body'], true) ? $placement : 'head';
+        $placement = isset($values['script_placement']) ? $values['script_placement'] : 'body';
+        $out['script_placement'] = in_array($placement, ['head', 'body'], true) ? $placement : 'body';
 
         // Sanitize tracked_post_types
         $raw   = sanitize_textarea_field($values['tracked_post_types']);
