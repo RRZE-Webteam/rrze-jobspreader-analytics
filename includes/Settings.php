@@ -180,7 +180,7 @@ final class Settings
      */
     public function fieldScriptPlacement(array $args): void
     {
-        $value = $this->options->script_placement ?? 'head';
+        $value = $this->options->script_placement ?? 'body';
 ?>
         <select id="<?php echo esc_attr($args['label_for']); ?>"
             name="<?php echo esc_attr($this->optionName); ?>[<?php echo esc_attr($args['label_for']); ?>]">
