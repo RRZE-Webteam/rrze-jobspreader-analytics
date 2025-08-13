@@ -137,6 +137,16 @@ final class Settings
             'rrze_jobspreader_analytics_main',
             ['label_for' => 'script_placement']
         );
+
+        // Tracked post types
+        add_settings_field(
+            'tracked_post_types',
+            __('Tracked post types', 'rrze-jobspreader-analytics'),
+            [$this, 'fieldTrackedPostTypes'],
+            $this->menuSlug,
+            'rrze_jobspreader_analytics_main',
+            ['label_for' => 'tracked_post_types']
+        );
     }
 
     /**
@@ -179,6 +189,25 @@ final class Settings
         </select>
         <p class="description">
             <?php esc_html_e('Choose where to inject the external Jobspreader script.', 'rrze-jobspreader-analytics'); ?>
+        </p>
+    <?php
+    }
+
+    public function fieldTrackedPostTypes(array $args): void
+    {
+        $value = $this->options->tracked_post_types ?? '';
+
+        // Build placeholder with public post types names
+        $public = get_post_types(['public' => true], 'names');
+        sort($public, SORT_NATURAL);
+        $placeholder = implode("\n", array_map('esc_html', $public));
+    ?>
+        <textarea id="<?php echo esc_attr($args['label_for']); ?>"
+            name="<?php echo esc_attr($this->optionName); ?>[<?php echo esc_attr($args['label_for']); ?>]"
+            rows="4" cols="40" class="code"
+            placeholder="<?php echo esc_attr($placeholder); ?>"><?php echo esc_textarea($value); ?></textarea>
+        <p class="description">
+            <?php esc_html_e('Enter one post type slug per line to enable tracking only for those post types. If left empty, the tracker will not load on any post type.', 'rrze-jobspreader-analytics'); ?>
         </p>
     <?php
     }
