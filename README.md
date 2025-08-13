@@ -30,17 +30,10 @@ This WordPress plugin provides integration with Jobspreader Analytics, allowing 
 1. Navigate to **Settings > Jobspreader Analytics** in your WordPress admin
 2. Enter your **API Key** received from Wollmilchsau
 3. Choose the **Script Placement** (Head or Body/footer)
-4. Save your changes
-
-## Manual Script Loading
-
-To enqueue the script in your theme or other plugin, use:
-
-```php
-wp_enqueue_script('rrze-jobspreader-analytics');
-```
-
-Note: The script will only be loaded if a valid API key is configured in the plugin settings.
+4. Enter **Tracked Post Types** — one post type slug per line where the tracker should be loaded.  
+   Default: `job`.  
+   If left empty, the tracker will **not** load on any page.
+5. Save your changes
 
 ## Support
 
@@ -74,7 +67,7 @@ npm run build
 To generate translation files:
 
 ```bash
-wp i18n make-pot ./ languages/rrze-jobspreader-analytics.pot --domain=rrze-jobspreader-analytics --exclude=node_modules,vendor,build,_tmp
+wp i18n make-pot ./ languages/rrze-jobspreader-analytics.pot --domain=rrze-jobspreader-analytics --exclude=node_modules,build
 ```
 
 ## Credits
