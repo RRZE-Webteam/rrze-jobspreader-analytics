@@ -67,14 +67,44 @@ class Main
     }
 
     /**
-     * Enqueue admin scripts
+     * Enqueue scripts.
      *
      * @return void
      */
     public function enqueueScripts()
     {
+        // Only enqueue scripts on the frontend
+        if (is_admin()) {
+            return;
+        }
+
+        // Require API key
         if (empty(trim($this->options->api_key))) {
             return;
+        }
+
+        // Require at least one tracked post type
+        if (empty(trim($this->options->tracked_post_types))) {
+            return;
+        }
+
+        // Check if current post type is tracked
+        $allowed = array_filter(array_map('trim', preg_split("/\r\n|\r|\n/", (string) $this->options->tracked_post_types)));
+        $allowed = array_map('sanitize_key', $allowed);
+
+        $current = get_post_type();
+
+        if (!$current) {
+            if (is_post_type_archive()) {
+                $pt = get_query_var('post_type');
+                $current = is_array($pt) ? reset($pt) : $pt;
+            } elseif (is_home() || is_category() || is_tag() || is_tax()) {
+                $current = 'post';
+            }
+        }
+
+        if ($current && !in_array($current, $allowed, true)) {
+            return; // Not tracked on this post type
         }
 
         $assetFile = include plugin()->getPath('build') . 'jobspreader-analytics.asset.php';
@@ -92,5 +122,7 @@ class Main
             'apiKey'    => $this->options->api_key,
             'scriptPlacement' => $this->options->script_placement,
         ]);
+
+        wp_enqueue_script('rrze-jobspreader-analytics');
     }
 }
