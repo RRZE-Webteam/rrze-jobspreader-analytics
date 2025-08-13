@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rrze-jobspreader-"
 "analytics\n"
 "POT-Creation-Date: 2025-08-12T10:16:36+00:00\n"
-"PO-Revision-Date: 2025-08-12 13:43+0200\n"
+"PO-Revision-Date: 2025-08-13 10:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE@formal\n"
@@ -41,28 +41,32 @@ msgstr "RRZE-Webteam"
 msgid "https://www.wp.rrze.fau.de/"
 msgstr "https://www.wp.rrze.fau.de/"
 
-#: includes/Main.php:59 includes/Settings.php:98
+#: includes/Main.php:63 includes/Settings.php:114
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: includes/Settings.php:75 includes/Settings.php:76
+#: includes/Settings.php:83 includes/Settings.php:84
 msgid "Jobspreader Analytics"
 msgstr "Jobspreader-Analytics"
 
-#: includes/Settings.php:100
+#: includes/Settings.php:116
 msgid "Configuration of the Jobspreader Analytics loader."
 msgstr "Konfiguration des Jobspreader-Analytics-Loaders."
 
-#: includes/Settings.php:108
+#: includes/Settings.php:124
 msgid "API Key"
 msgstr "API-Schlüssel"
 
-#: includes/Settings.php:118
+#: includes/Settings.php:134
 msgid "Script Placement"
 msgstr "Skriptplatzierung"
 
+#: includes/Settings.php:144
+msgid "Tracked post types"
+msgstr "Erfasste Post-Types"
+
 #. translators: %s is a placeholder for the support email address.
-#: includes/Settings.php:138
+#: includes/Settings.php:170
 #, php-format
 msgid ""
 "Please enter the Jobspreader Analytics API key received by Wollmilchsau. Get "
@@ -71,23 +75,32 @@ msgstr ""
 "Bitte geben Sie den von Wollmilchsau erhaltenen Jobspreader-Analytics-API-"
 "Schlüssel ein. Support erhalten Sie unter %s."
 
-#: includes/Settings.php:149
+#: includes/Settings.php:187
 msgid "Head"
 msgstr "Head"
 
-#: includes/Settings.php:150
+#: includes/Settings.php:188
 msgid "Body (footer)"
 msgstr "Body (footer)"
 
-#: includes/Settings.php:153
+#: includes/Settings.php:191
 msgid "Choose where to inject the external Jobspreader script."
 msgstr "Wählen Sie, wo das externe Jobspreader-Skript eingefügt werden soll."
 
-#: includes/Settings.php:165
+#: includes/Settings.php:210
+msgid ""
+"Enter one post type slug per line to enable tracking only for those post "
+"types. If left empty, the tracker will not load on any post type."
+msgstr ""
+"Geben Sie pro Zeile einen Post-Type-Slug ein, um das Tracking nur für diese "
+"Post-Types zu aktivieren. Bleibt das Feld leer, wird der Tracker für keinen "
+"Post-Type geladen."
+
+#: includes/Settings.php:230
 msgid "Jobspreader Analytics Settings"
 msgstr "RRZE-Jobspreader"
 
-#: includes/Settings.php:170
+#: includes/Settings.php:235
 msgid "Save Changes"
 msgstr "Änderungen speichern"
 
