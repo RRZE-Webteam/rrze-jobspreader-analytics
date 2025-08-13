@@ -3,7 +3,7 @@
 /*
 Plugin Name:        RRZE Jobspreader Analytics
 Plugin URI:         https://github.com/RRZE-Webteam/rrze-jobspreader-analytics
-Version:            1.0.0
+Version:            1.1.0
 Description:        Adapted version of the Jobspreader Analytics Plugin by Wollmilchsau.
 Author:             RRZE Webteam
 Author URI:         https://www.wp.rrze.fau.de/
